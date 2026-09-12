@@ -1,0 +1,957 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Юристы Пензы — три специалиста, каждый в своём направлении</title>
+<meta name="description" content="Три юриста в Пензе. Наследство, семейные споры, уголовные и бизнес-дела. Звоните напрямую.">
+<style>
+  /* ===== Базовые стили и переменные ===== */
+  :root {
+    --color-blue: #15498B;
+    --color-blue-dark: #0E3668;
+    --color-milk: #FAF6EC;
+    --color-black: #111111;
+    --color-grey: #5A5A5A; /* Чуть темнее для читаемости на молочном */
+    --color-line: #D4CDBA; /* Контрастная линия для молочного фона */
+    --color-max: #111111;  /* Чёрный для кнопки Макс (премиум-вид) */
+    --radius: 14px;
+    --shadow: 0 8px 32px rgba(0, 0, 0, 0.2); /* Тень адаптирована для синего фона */
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  html { scroll-behavior: smooth; }
+
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Inter", "Manrope", "Segoe UI", Roboto, sans-serif;
+    background: var(--color-blue);
+    color: var(--color-milk);
+    line-height: 1.55;
+    font-size: 16px;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  img { max-width: 100%; display: block; }
+  a { color: inherit; text-decoration: none; }
+
+  .page {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+  }
+
+  .section { padding: 0 0 64px; }
+
+  .section__title {
+    font-size: 32px;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: var(--color-milk);
+    letter-spacing: -0.02em;
+  }
+
+  .section__subtitle {
+    font-size: 17px;
+    color: rgba(250, 246, 236, 0.8);
+    margin-bottom: 40px;
+    max-width: 720px;
+  }
+
+  /* ===== Хедер ===== */
+  .header {
+    background: var(--color-blue-dark);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    border-bottom: 1px solid rgba(250, 246, 236, 0.1);
+  }
+
+  .header__inner {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 0;
+    gap: 24px;
+  }
+
+  .header__logo {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--color-milk);
+    letter-spacing: -0.01em;
+  }
+
+  .header__phones {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+  }
+
+  .header__phone {
+    display: flex;
+    flex-direction: column;
+    font-size: 13px;
+    line-height: 1.3;
+  }
+
+  .header__phone-name {
+    color: rgba(250, 246, 236, 0.6);
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    margin-bottom: 2px;
+  }
+
+  .header__phone-number {
+    font-weight: 600;
+    color: var(--color-milk);
+    white-space: nowrap;
+  }
+
+  .header__phone-number:hover { color: #fff; }
+
+  /* ===== Главный экран ===== */
+  .hero {
+    display: none;
+    padding: 80px 0 60px;
+    text-align: center;
+    background: var(--color-blue);
+  }
+
+  .hero__title {
+    font-size: 44px;
+    font-weight: 700;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    max-width: 820px;
+    margin: 0 auto 20px;
+    color: var(--color-milk);
+  }
+
+  .hero__title-accent { 
+    display: block;
+    color: #fff;
+  }
+
+  .hero__subtitle {
+    font-size: 19px;
+    color: rgba(250, 246, 236, 0.8);
+    max-width: 640px;
+    margin: 0 auto 40px;
+  }
+
+  .hero__buttons {
+    display: flex;
+    gap: 14px;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .hero__button {
+    display: inline-block;
+    background: var(--color-milk);
+    color: var(--color-blue);
+    padding: 16px 28px;
+    border-radius: var(--radius);
+    font-weight: 600;
+    font-size: 16px;
+    transition: all 0.15s;
+  }
+
+  .hero__button:hover {
+    background: #fff;
+    transform: translateY(-2px);
+  }
+
+  /* ===== Блок «К кому идти» ===== */
+  .guide {
+    background: var(--color-milk);
+    color: var(--color-black);
+    border-radius: var(--radius);
+    padding: 36px;
+    box-shadow: var(--shadow);
+  }
+
+  .guide__title {
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    color: var(--color-black);
+  }
+
+  .guide__list {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .guide__item {
+    background: #fff;
+    border-radius: 12px;
+    padding: 20px;
+    border: 1px solid var(--color-line);
+  }
+
+  .guide__item-title {
+    font-weight: 700;
+    color: var(--color-blue);
+    margin-bottom: 10px;
+    font-size: 16px;
+  }
+
+  .guide__item-text {
+    font-size: 14px;
+    color: var(--color-black);
+    line-height: 1.5;
+  }
+
+  /* ===== Карточки юристов ===== */
+  .lawyers {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 1920px;
+    margin: 0 auto;
+  }
+
+  .lawyers__card {
+    background: var(--color-milk);
+    color: var(--color-black);
+    /*border-radius: var(--radius);*/
+    /*box-shadow: var(--shadow);*/
+    display: flex;
+    flex-direction: column;
+    /*border: 1px solid rgba(255, 255, 255, 0.15);*/
+  }
+  .lawyers__wrap {
+    padding: 28px;
+  }
+
+  .lawyers__photo {
+    width: 100%;
+    /*aspect-ratio: 1 / 1;*/
+    /*border-radius: 12px;*/
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+    overflow: hidden;
+    /*border: 1px solid var(--color-line);*/
+  }
+
+  .lawyers__photo-initials {
+    font-size: 72px;
+    font-weight: 700;
+    color: var(--color-blue);
+    letter-spacing: -0.02em;
+  }
+
+  .lawyers__name {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 6px;
+    letter-spacing: -0.01em;
+  }
+
+  .lawyers__direction {
+    display: inline-block;
+    background: var(--color-blue);
+    color: var(--color-milk);
+    padding: 6px 12px;
+    border-radius: 20px;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 16px;
+    align-self: flex-start;
+  }
+
+  .lawyers__quote {
+    font-size: 14px;
+    color: var(--color-grey);
+    font-style: italic;
+    border-left: 3px solid var(--color-blue);
+    padding: 4px 0 4px 14px;
+    margin-bottom: 18px;
+    line-height: 1.5;
+  }
+
+  .lawyers__services-title {
+    font-size: 13px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--color-grey);
+    margin-bottom: 10px;
+    font-weight: 600;
+  }
+
+  .lawyers__services {
+    list-style: none;
+    margin-bottom: 18px;
+  }
+
+  .lawyers__service {
+    padding: 6px 0 6px 22px;
+    position: relative;
+    font-size: 15px;
+    border-bottom: 1px solid var(--color-line);
+  }
+
+  .lawyers__service:last-child { border-bottom: none; }
+
+  .lawyers__service::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 13px;
+    width: 8px;
+    height: 8px;
+    background: var(--color-blue);
+    border-radius: 50%;
+  }
+
+  .lawyers__experience {
+    background: #fff;
+    padding: 12px 14px;
+    border-radius: 10px;
+    font-size: 14px;
+    margin-bottom: 18px;
+    color: var(--color-black);
+    border: 1px solid var(--color-line);
+  }
+
+  .lawyers__experience strong { color: var(--color-blue); font-weight: 700; }
+
+  .lawyers__phone {
+    display: block;
+    font-size: 22px;
+    font-weight: 700;
+    color: var(--color-black);
+    margin-bottom: 14px;
+    letter-spacing: -0.01em;
+  }
+
+  .lawyers__phone:hover { color: var(--color-blue); }
+
+  .lawyers__buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+    margin-top: auto;
+  }
+
+  .lawyers__button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 14px 12px;
+    border-radius: 10px;
+    font-weight: 600;
+    font-size: 14px;
+    transition: all 0.15s;
+    text-align: center;
+  }
+
+  .lawyers__button--max {
+    background: var(--color-blue);
+    color: var(--color-milk);
+  }
+
+  .lawyers__button--max:hover { background: var(--color-blue-dark); }
+
+  .lawyers__button--call {
+    background: var(--color-max);
+    color: var(--color-milk);
+  }
+
+  .lawyers__button--call:hover { background: #333; }
+
+  /* ===== Отзывы ===== */
+  .reviews {
+    background: var(--color-milk);
+    color: var(--color-black);
+    border-radius: var(--radius);
+    padding: 36px;
+    box-shadow: var(--shadow);
+  }
+
+  .reviews__group { margin-bottom: 36px; }
+  .reviews__group:last-child { margin-bottom: 0; }
+
+  .reviews__group-title {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--color-blue);
+    margin-bottom: 16px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid var(--color-line);
+  }
+
+  .reviews__list {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .reviews__card {
+    background: #fff;
+    padding: 20px;
+    border-radius: 12px;
+    border: 1px solid var(--color-line);
+  }
+
+  .reviews__text {
+    font-size: 15px;
+    line-height: 1.55;
+    margin-bottom: 12px;
+    color: var(--color-black);
+  }
+
+  .reviews__author {
+    font-size: 13px;
+    color: var(--color-grey);
+  }
+
+  /* ===== Сертификаты ===== */
+  .certificates__gallery {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 16px;
+  }
+
+  .certificates__item {
+    background: var(--color-milk);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: var(--shadow);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+  }
+
+  .certificates__image {
+    aspect-ratio: 3 / 4;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-blue);
+    font-size: 13px;
+    padding: 20px;
+    text-align: center;
+    font-weight: 600;
+    position: relative;
+    border-bottom: 1px solid var(--color-line);
+  }
+
+  .certificates__image::before {
+    content: "";
+    position: absolute;
+    inset: 12px;
+    border: 1px solid rgba(21, 73, 139, 0.25);
+    border-radius: 4px;
+  }
+
+  .certificates__caption {
+    padding: 14px;
+    font-size: 13px;
+    line-height: 1.4;
+    color: var(--color-black);
+  }
+
+  .certificates__caption strong {
+    display: block;
+    margin-bottom: 4px;
+    font-size: 14px;
+  }
+
+  .certificates__caption span { color: var(--color-grey); font-size: 12px; }
+
+  /* ===== Компании ===== */
+  .companies__list {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 12px;
+  }
+
+  .companies__item {
+    background: var(--color-milk);
+    border: 1px solid rgba(255, 255, 255, 0.15);
+    border-radius: 10px;
+    padding: 20px 12px;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 600;
+    color: var(--color-black);
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+
+  .companies__note {
+    text-align: center;
+    color: rgba(250, 246, 236, 0.7);
+    margin-top: 24px;
+    font-size: 14px;
+  }
+
+  /* ===== Подвал ===== */
+  .footer {
+    background: var(--color-blue-dark);
+    color: var(--color-milk);
+    padding: 48px 0 20px;
+    margin-top: 64px;
+    border-top: 1px solid rgba(250, 246, 236, 0.1);
+  }
+
+  .footer__inner {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .footer__title {
+    font-size: 20px;
+    font-weight: 700;
+    margin-bottom: 16px;
+    color: #fff;
+  }
+
+  .footer__contacts {
+    display: flex;
+    justify-content: space-between;
+    list-style: none; 
+  }
+
+  .footer__contact {
+    margin-bottom: 14px;
+    padding-bottom: 14px;
+  }
+
+  .footer__contact:last-child { border-bottom: none; }
+
+  .footer__contact-name {
+    font-weight: 600;
+    font-size: 15px;
+    margin-bottom: 4px;
+    color: #fff;
+  }
+
+  .footer__contact-direction {
+    font-size: 13px;
+    color: rgba(250, 246, 236, 0.65);
+    margin-bottom: 6px;
+  }
+
+  .footer__contact-phone {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-milk);
+  }
+
+  .footer__contact-phone:hover { color: #fff; }
+
+  .footer__messengers {
+    display: flex;
+    gap: 10px;
+    margin-top: 8px;
+  }
+
+  .footer__messenger {
+    display: inline-block;
+    padding: 6px 12px;
+    background: rgba(250, 246, 236, 0.12);
+    border-radius: 20px;
+    font-size: 12px;
+    color: var(--color-milk);
+    transition: background 0.15s;
+  }
+
+  .footer__messenger:hover { background: rgba(250, 246, 236, 0.22); }
+
+  .footer__bottom {
+    margin-top: 40px;
+    padding-top: 24px;
+    border-top: 1px solid rgba(250, 246, 236, 0.15);
+    font-size: 13px;
+    color: rgba(250, 246, 236, 0.6);
+    text-align: center;
+  }
+
+  /* ===== Мобильная кнопка «Позвонить» ===== */
+  .mobile-call {
+    display: none;
+    position: fixed;
+    bottom: 16px;
+    left: 16px;
+    right: 16px;
+    background: var(--color-milk);
+    color: var(--color-blue);
+    padding: 16px;
+    border-radius: var(--radius);
+    text-align: center;
+    font-weight: 700;
+    font-size: 16px;
+    z-index: 200;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.3);
+  }
+
+  .mobile-call:hover { background: #fff; }
+
+  /* ===== Адаптив ===== */
+  @media (max-width: 960px) {
+    .lawyers { grid-template-columns: 1fr; }
+    .guide__list { grid-template-columns: 1fr; }
+    .reviews__list { grid-template-columns: 1fr; }
+    .certificates__gallery { grid-template-columns: repeat(2, 1fr); }
+    .companies__list { grid-template-columns: repeat(3, 1fr); }
+    .hero__title { font-size: 34px; }
+    .section__title { font-size: 26px; }
+  }
+
+  @media (max-width: 720px) {
+    .header__phones { display: none; }
+    .hero { padding: 48px 0 32px; }
+    .hero__title { font-size: 28px; }
+    .hero__subtitle { font-size: 16px; margin-bottom: 28px; }
+    .hero__button { width: 100%; }
+    .section { padding: 0 0 40px; }
+    .guide, .reviews { padding: 24px; }
+    .lawyers__wrap { padding: 22px; }
+    .mobile-call { display: block; }
+    .footer { padding-bottom: 10px; }
+    .companies__list { grid-template-columns: repeat(2, 1fr); }
+  }
+</style>
+</head>
+<body>
+
+<!-- ===== ХЕДЕР ===== -->
+<header class="header">
+  <div class="page header__inner">
+    <div class="header__logo">ЮРЦЕНТР 58</div>
+    <div class="header__phones">
+      <a href="tel:+78452223344" class="header__phone">
+        <span class="header__phone-name">Наследство</span>
+        <span class="header__phone-number">+7 (8452) 22-33-44</span>
+      </a>
+      <a href="tel:+78452556677" class="header__phone">
+        <span class="header__phone-name">Семейные споры</span>
+        <span class="header__phone-number">+7 (8452) 55-66-77</span>
+      </a>
+      <a href="tel:+78452998877" class="header__phone">
+        <span class="header__phone-name">Уголовные и бизнес-дела</span>
+        <span class="header__phone-number">+7 (8452) 99-88-77</span>
+      </a>
+    </div>
+  </div>
+</header>
+
+<!-- ===== ГЛАВНЫЙ ЭКРАН ===== -->
+<section class="hero">
+  <div class="page">
+    <h1 class="hero__title">Три юриста в Пензе. <span class="hero__title-accent">Каждый профессионал в своём направлении.</span></h1>
+    <p class="hero__subtitle">Выберите того, кто решал вашу проблему. Позвоните напрямую — без секретарей и очередей.</p>
+    <div class="hero__buttons">
+      <a href="#lawyer-sokolova" class="hero__button">Наследство</a>
+      <a href="#lawyer-morozov" class="hero__button">Семейные споры</a>
+      <a href="#lawyer-volkov" class="hero__button">Уголовные и бизнес-дела</a>
+    </div>
+  </div>
+</section>
+
+<!-- ===== БЛОК О ЮРИСТАХ ===== -->
+<section class="section" id="lawyers">
+  <!-- <div class="page"> -->
+    <!-- <h2 class="section__title">Три юриста — три направления</h2>
+    <p class="section__subtitle">Каждый занимается своим делом много лет. Выбирайте того, чья специализация подходит под вашу ситуацию.</p> -->
+
+    <div class="lawyers">
+      <!-- Карточка 1 -->
+      <article class="lawyers__card" id="lawyer-sokolova">
+        <div class="lawyers__photo">
+          <img class="lawyers__photo-initials" src="./promo-1.jpg" alt="ЕК"/>
+        </div>
+        <div class="lawyers__wrap">
+          <h3 class="lawyers__name">Елена Федоровна Купцова</h3>
+          <span class="lawyers__direction">Наследственные дела</span>
+          <p class="lawyers__quote">«Занимаюсь наследством 18 лет. Есть спор с родственниками за квартиру или дом — звоните, разберёмся.»</p>
+          <div class="lawyers__services-title">Чем занимаюсь</div>
+          <ul class="lawyers__services">
+            <li class="lawyers__service">Оспаривание завещаний в суде</li>
+            <li class="lawyers__service">Восстановление срока принятия наследства</li>
+            <li class="lawyers__service">Выделение обязательной доли</li>
+            <li class="lawyers__service">Раздел наследственного имущества между родственниками</li>
+            <li class="lawyers__service">Оформление наследства на недвижимость и землю</li>
+          </ul>
+          <div class="lawyers__experience"><strong>18 лет</strong> практики по наследственным делам</div>
+          <a href="tel:+78452223344" class="lawyers__phone">+7 (8452) 22-33-44</a>
+          <div class="lawyers__buttons">
+            <a href="tel:+78452223344" class="lawyers__button lawyers__button--call">Позвонить</a>
+            <a href="https://max.ru/" class="lawyers__button lawyers__button--max">Макс</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Карточка 2 -->
+      <article class="lawyers__card" id="lawyer-morozov">
+        <div class="lawyers__photo">
+          <img class="lawyers__photo-initials" src="./promo-2.jpg" alt="ЕА"/>
+        </div>
+        <div class="lawyers__wrap">
+          <h3 class="lawyers__name">Елена Алексашкина</h3>
+          <span class="lawyers__direction">Семейные споры</span>
+          <p class="lawyers__quote">«14 лет в семейном праве. Развод, раздел имущества, алименты — веду дело до конца, без лишних нервов.»</p>
+          <div class="lawyers__services-title">Чем занимаюсь</div>
+          <ul class="lawyers__services">
+            <li class="lawyers__service">Развод через суд и через ЗАГС</li>
+            <li class="lawyers__service">Раздел совместно нажитого имущества</li>
+            <li class="lawyers__service">Взыскание и оспаривание алиментов</li>
+            <li class="lawyers__service">Споры о месте жительства ребёнка</li>
+            <li class="lawyers__service">Брачные договоры и соглашения</li>
+          </ul>
+          <div class="lawyers__experience"><strong>14 лет</strong> практики по семейным делам</div>
+          <a href="tel:+78452556677" class="lawyers__phone">+7 (8452) 55-66-77</a>
+          <div class="lawyers__buttons">
+            <a href="tel:+78452556677" class="lawyers__button lawyers__button--call">Позвонить</a>
+            <a href="https://max.ru/" class="lawyers__button lawyers__button--max">Макс</a>
+          </div>
+        </div>
+      </article>
+
+      <!-- Карточка 3 -->
+      <article class="lawyers__card" id="lawyer-volkov">
+        <div class="lawyers__photo">
+          <img class="lawyers__photo-initials" src="./promo-3.jpg" alt=""/>
+        </div>
+        <div class="lawyers__wrap">
+          <h3 class="lawyers__name">Кристина Галеева</h3>
+          <span class="lawyers__direction">Уголовные и бизнес-дела</span>
+          <p class="lawyers__quote">«20 лет в праве. Уголовная защита, споры с налоговой, конфликты между учредителями — работаю и в суде, и на следствии.»</p>
+          <div class="lawyers__services-title">Чем занимаюсь</div>
+          <ul class="lawyers__services">
+            <li class="lawyers__service">Защита по уголовным делам (следствие, суд)</li>
+            <li class="lawyers__service">Экономические преступления и налоговые споры</li>
+            <li class="lawyers__service">Корпоративные конфликты между учредителями</li>
+            <li class="lawyers__service">Взыскание задолженности с контрагентов</li>
+          </ul>
+          <div class="lawyers__experience"><strong>20 лет</strong> практики, более 400 дел</div>
+          <a href="tel:+78452998877" class="lawyers__phone">+7 (8452) 99-88-77</a>
+          <div class="lawyers__buttons">
+            <a href="tel:+78452998877" class="lawyers__button lawyers__button--call">Позвонить</a>
+            <a href="https://max.ru/" class="lawyers__button lawyers__button--max">Макс</a>
+          </div>
+        </div>
+      </article>
+    </div>
+  <!-- </div> -->
+</section>
+
+<!-- ===== БЛОК «С КАКИМ ВОПРОСОМ К КОМУ» ===== -->
+<section class="section">
+  <div class="page">
+    <div class="guide">
+      <h2 class="guide__title">С каким вопросом к кому идти</h2>
+      <div class="guide__list">
+        <div class="guide__item">
+          <div class="guide__item-title">К Елене Фёдовне</div>
+          <div class="guide__item-text">Если нужно вступить в наследство, оспорить завещание, разделить доли между родственниками или оформить имущество после смерти близкого.</div>
+        </div>
+        <div class="guide__item">
+          <div class="guide__item-title">К Алексашкиной</div>
+          <div class="guide__item-text">Если вы разводитесь, делите имущество, спорите об алиментах или определяете место жительства ребёнка с бывшим супругом.</div>
+        </div>
+        <div class="guide__item">
+          <div class="guide__item-title">К Кристине Галеевой</div>
+          <div class="guide__item-text">Если возбуждено уголовное дело, пришла проверка, есть спор с контрагентом, налоговые риски или нужно защитить бизнес.</div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== ОТЗЫВЫ ===== -->
+<section class="section">
+  <div class="page">
+    <h2 class="section__title">Отзывы клиентов</h2>
+    <p class="section__subtitle">Реальные дела и результаты. Имена изменены по просьбе клиентов.</p>
+
+    <div class="reviews">
+      <div class="reviews__group">
+        <div class="reviews__group-title">Елена Фёдоровна — наследство</div>
+        <div class="reviews__list">
+          <div class="reviews__card">
+            <p class="reviews__text">«После смерти отца брат оформил всю квартиру на себя, меня из наследства вычеркнул. Елена Викторовна восстановила срок, доказала, что я не знала об открытии наследства. По решению суда получила свою половину.»</p>
+            <div class="reviews__author">— Марина, 42 года, Пенза</div>
+          </div>
+          <div class="reviews__card">
+            <p class="reviews__text">«Долго не могли вступить в наследство на дачу — пропущен срок, документы потеряны. Елена Викторовна собрала всё заново, через суд подтвердила фактическое принятие. Сейчас дом оформлен.»</p>
+            <div class="reviews__author">— Виктор, 58 лет, Пензенский район</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="reviews__group">
+        <div class="reviews__group-title">Алексашкина — семейные споры</div>
+        <div class="reviews__list">
+          <div class="reviews__card">
+            <p class="reviews__text">«Развод был сложный: квартира в ипотеке, машина, двое детей. Андрей Николаевич составил соглашение, разделил всё честно, без затяжных судов. Алименты назначили в твёрдой сумме — удобно.»</p>
+            <div class="reviews__author">— Ольга, 36 лет, Пенза</div>
+          </div>
+          <div class="reviews__card">
+            <p class="reviews__text">«Бывшая жена не давала видеться с сыном. Андрей Николаевич помог определить порядок общения через суд. Теперь вижу ребёнка по графику, без скандалов.»</p>
+            <div class="reviews__author">— Сергей, 41 год, Заречный</div>
+          </div>
+        </div>
+      </div>
+
+      <div class="reviews__group">
+        <div class="reviews__group-title">Галеева — уголовные и бизнес-дела</div>
+        <div class="reviews__list">
+          <div class="reviews__card">
+            <p class="reviews__text">«Возбудили дело по статье о мошенничестве — обвинение по сделке с партнёром. Дмитрий Сергеевич вступил на стадии следствия, добился прекращения дела за отсутствием состава.»</p>
+            <div class="reviews__author">— Алексей, директор ООО, Пенза</div>
+          </div>
+          <div class="reviews__card">
+            <p class="reviews__text">«Налоговая доначислила 4 млн, грозила уголовкой. Дмитрий Сергеевич разобрался в первичке, оспорил акт в вышестоящем органе, потом в суде. Сняли почти всё.»</p>
+            <div class="reviews__author">— Иван, владелец сети магазинов</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== СЕРТИФИКАТЫ ===== -->
+<section class="section">
+  <div class="page">
+    <h2 class="section__title">Дипломы и благодарности</h2>
+    <p class="section__subtitle">Подтверждение квалификации и признания коллег.</p>
+
+    <div class="certificates__gallery">
+      <div class="certificates__item">
+        <div class="certificates__image">Диплом ПГУ<br>Юридический факультет</div>
+        <div class="certificates__caption">
+          <strong>Диплом ПГУ</strong>
+          <span>Е. В. Соколова, 2006</span>
+        </div>
+      </div>
+      <div class="certificates__item">
+        <div class="certificates__image">Благодарность<br>Адвокатской палаты</div>
+        <div class="certificates__caption">
+          <strong>Благодарность палаты</strong>
+          <span>А. Н. Морозов, 2019</span>
+        </div>
+      </div>
+      <div class="certificates__item">
+        <div class="certificates__image">Сертификат<br>Квалификационный экзамен</div>
+        <div class="certificates__caption">
+          <strong>Квалификационный сертификат</strong>
+          <span>Д. С. Волков, 2011</span>
+        </div>
+      </div>
+      <div class="certificates__item">
+        <div class="certificates__image">Курс повышения<br>Наследственное право</div>
+        <div class="certificates__caption">
+          <strong>Повышение квалификации</strong>
+          <span>Е. В. Соколова, 2023</span>
+        </div>
+      </div>
+      <div class="certificates__item">
+        <div class="certificates__image">Благодарственное<br>письмо от суда</div>
+        <div class="certificates__caption">
+          <strong>Благодарность суда</strong>
+          <span>А. Н. Морозов, 2022</span>
+        </div>
+      </div>
+      <div class="certificates__item">
+        <div class="certificates__image">Сертификат<br>Уголовный процесс</div>
+        <div class="certificates__caption">
+          <strong>Курс по уголовному праву</strong>
+          <span>Д. С. Волков, 2020</span>
+        </div>
+      </div>
+      <div class="certificates__item">
+        <div class="certificates__image">Диплом<br>Магистратура</div>
+        <div class="certificates__caption">
+          <strong>Магистр права</strong>
+          <span>А. Н. Морозов, 2009</span>
+        </div>
+      </div>
+      <div class="certificates__item">
+        <div class="certificates__image">Благодарность<br>Палаты юристов</div>
+        <div class="certificates__caption">
+          <strong>Благодарность палаты</strong>
+          <span>Д. С. Волков, 2024</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== КОМПАНИИ ===== -->
+<section class="section">
+  <div class="page">
+    <h2 class="section__title">С кем работали</h2>
+    <p class="section__subtitle">Компании Пензы и Пензенской области, которым юристы помогали решать споры и защищать интересы.</p>
+
+    <div class="companies__list">
+      <div class="companies__item">ООО «ПензаСтрой»</div>
+      <div class="companies__item">АО «Сура»</div>
+      <div class="companies__item">ООО «Агро-Регион»</div>
+      <div class="companies__item">ИП Кузнецов</div>
+      <div class="companies__item">ООО «Транс-Логистик»</div>
+      <div class="companies__item">ООО «МедСервис»</div>
+      <div class="companies__item">ЗАО «Промтех»</div>
+      <div class="companies__item">ООО «Сармат»</div>
+      <div class="companies__item">ИП Смирнова</div>
+      <div class="companies__item">ООО «Волга-Трейд»</div>
+      <div class="companies__item">ООО «Строй-Мастер»</div>
+      <div class="companies__item">АО «Пивзавод»</div>
+    </div>
+    <p class="companies__note">Работали с компаниями Пензы и области</p>
+  </div>
+</section>
+
+<!-- ===== ПОДВАЛ ===== -->
+<footer class="footer">
+  <div class="page">
+    <div class="footer__inner">
+        <div class="footer__title">Контакты юристов</div>
+        <ul class="footer__contacts">
+          <li class="footer__contact">
+            <div class="footer__contact-name">Елена Фёдоровна Купцова</div>
+            <div class="footer__contact-direction">Наследственные дела</div>
+            <a href="tel:+78452223344" class="footer__contact-phone">+7 (8452) 22-33-44</a>
+            <div class="footer__messengers">
+              <a href="https://max.ru/" class="footer__messenger">Макс</a>
+            </div>
+          </li>
+          <li class="footer__contact">
+            <div class="footer__contact-name">Елена Алексашкина</div>
+            <div class="footer__contact-direction">Семейные споры</div>
+            <a href="tel:+78452556677" class="footer__contact-phone">+7 (8452) 55-66-77</a>
+            <div class="footer__messengers">
+              <a href="https://max.ru/" class="footer__messenger">Макс</a>
+            </div>
+          </li>
+          <li class="footer__contact">
+            <div class="footer__contact-name">Кристна Галеева</div>
+            <div class="footer__contact-direction">Уголовные и бизнес-дела</div>
+            <a href="tel:+78452998877" class="footer__contact-phone">+7 (8452) 99-88-77</a>
+            <div class="footer__messengers">
+              <a href="https://max.ru/" class="footer__messenger">Макс</a>
+            </div>
+          </li>
+        </ul>
+    </div>
+    <div class="footer__bottom">
+      © 2026 Юристы Пензы
+    </div>
+  </div>
+</footer>
+
+<!-- ===== Мобильная кнопка «Позвонить» ===== -->
+<a href="tel:+78452223344" class="mobile-call">Позвонить юристу</a>
+
+</body>
+</html>
