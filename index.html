@@ -541,56 +541,7 @@
 <a href="tel:+78452223344" class="mobile-call">Позвонить юристу</a>
 
 <!-- ===== JavaScript ===== -->
-<script>
-  /* --- Анимация появления при скролле --- */
-  (function () {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        entries.forEach((entry) => {
-          if (entry.isIntersecting) {
-            entry.target.classList.add('is-visible');
-            observer.unobserve(entry.target);
-          }
-        });
-      },
-      { threshold: 0.12, rootMargin: '0px 0px -40px 0px' }
-    );
-
-    document.querySelectorAll('.animate').forEach((el) => observer.observe(el));
-  })();
-
-  /* --- Табы для мобильных --- */
-  (function () {
-    const tabButtons = document.querySelectorAll('.lawyers-tabs__button');
-    const cards = document.querySelectorAll('.lawyers__card');
-
-    if (!tabButtons.length) return;
-
-    tabButtons.forEach((btn) => {
-      btn.addEventListener('click', () => {
-        const activeTab = btn.dataset.tab;
-
-        /* Обновляем активный таб */
-        tabButtons.forEach((b) => {
-          b.classList.remove('is-active');
-          b.setAttribute('aria-selected', 'false');
-        });
-        btn.classList.add('is-active');
-        btn.setAttribute('aria-selected', 'true');
-
-        /* Фильтруем карточки по data-tabs */
-        cards.forEach((card) => {
-          const cardTabs = card.dataset.tabs.split(',').map((t) => t.trim());
-          if (cardTabs.includes(activeTab)) {
-            card.classList.remove('is-hidden');
-          } else {
-            card.classList.add('is-hidden');
-          }
-        });
-      });
-    });
-  })();
-</script>
+<script src="./script.js"></script>
 
 </body>
 </html>
