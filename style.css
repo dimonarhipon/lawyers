@@ -103,22 +103,44 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   top: 0;
   z-index: 100;
   border-bottom: 1px solid var(--color-milk-15);
-  transition: background 0.3s;
+  transition: all var(--transition);
+}
+
+.header.is-scrolled {
+  background: rgba(14, 54, 104, 0.92);
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.15);
 }
 
 .header__inner {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 16px;
+  padding: 14px 24px;
   gap: 24px;
 }
 
 .header__logo {
-  font-size: 21px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 20px;
   font-weight: 800;
   color: var(--color-milk);
   letter-spacing: -0.02em;
+}
+
+.header__logo-icon {
+  width: 34px;
+  height: 34px;
+  border-radius: 10px;
+  background: linear-gradient(135deg, #3b82f6, #1d4ed8);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  font-weight: 800;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(59, 130, 246, 0.35);
 }
 
 .header__phones {
@@ -134,12 +156,17 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 .header__phone-name {
-  color: rgba(250, 246, 236, 0.55);
-  font-size: 11px;
+  color: rgba(250, 246, 236, 0.45);
+  font-size: 10px;
   text-transform: uppercase;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.07em;
   margin-bottom: 2px;
   font-weight: 600;
+  transition: color 0.2s;
+}
+
+.header__phone:hover .header__phone-name {
+  color: rgba(250, 246, 236, 0.7);
 }
 
 .header__phone-number {
@@ -151,6 +178,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 .header__phone-number:hover { color: #fff; }
+
 
 /* ===== Hero ===== */
 .hero {
@@ -852,6 +880,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     gap: 10px;
   }
   .header__inner { align-items: flex-start; padding: 12px 24px; }
+  .header__logo-text { display: none; }
   .hero__title { font-size: 36px; }
   .hero__subtitle { font-size: 17px; margin-bottom: 32px; }
   .hero__button { width: 100%; text-align: center; }

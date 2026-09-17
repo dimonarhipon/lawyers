@@ -146,7 +146,7 @@
       "name": "Как записаться на консультацию к юристу в Пензе?",
       "acceptedAnswer": {
         "@type": "Answer",
-        "text": "Вы можете позвонить напрямую любому из наших юристов: Елена Купцова +7 (8452) 22-33-44 (наследство), Елена Алексашкина +7 (8452) 55-66-77 (семейные споры), Кристина Галеева +7 (8452) 99-88-77 (уголовные и бизнес-дела)."
+        "text": "Вы можете позвонить напрямую любому из наших юристов: Елена Купцова +7 (937) 442-46-97 (наследство), Елена Алексашкина +7 (8452) 55-66-77 (семейные споры), Кристина Галеева +7 (8452) 99-88-77 (уголовные и бизнес-дела)."
       }
     },
     {
@@ -191,23 +191,26 @@
 <body>
 
 <!-- ===== ХЕДЕР ===== -->
-<header class="header">
+<header class="header" id="header">
   <div class="page header__inner">
-    <div class="header__logo">Юрцентр58</div>
-    <div class="header__phones">
-      <a href="tel:+78452223344" class="header__phone">
+    <div class="header__logo">
+      <span class="header__logo-icon">Ю</span>
+      <span class="header__logo-text">Юрцентр58</span>
+    </div>
+    <nav class="header__phones" aria-label="Контакты юристов">
+      <a href="tel:+79374424697" class="header__phone" aria-label="Позвонить Елене Купцовой">
         <span class="header__phone-name">Елена Купцова</span>
-        <span class="header__phone-number">+7 (8452) 22-33-44</span>
+        <span class="header__phone-number">+7 (937) 442-46-97</span>
       </a>
-      <a href="tel:+78452556677" class="header__phone">
+      <a href="tel:+78452556677" class="header__phone" aria-label="Позвонить Елене Алексашкиной">
         <span class="header__phone-name">Елена Алексашкина</span>
         <span class="header__phone-number">+7 (8452) 55-66-77</span>
       </a>
-      <a href="tel:+78452998877" class="header__phone">
+      <a href="tel:+78452998877" class="header__phone" aria-label="Позвонить Кристине Галеевой">
         <span class="header__phone-name">Кристина Галеева</span>
         <span class="header__phone-number">+7 (8452) 99-88-77</span>
       </a>
-    </div>
+    </nav>
   </div>
 </header>
 
@@ -293,10 +296,10 @@
             <li class="lawyers__service">Оформление наследства на недвижимость и землю</li>
           </ul>
           <div class="lawyers__experience"><strong>18 лет</strong> практики по наследственным делам</div>
-          <a href="tel:+78452223344" class="lawyers__phone">+7 (8452) 22-33-44</a>
+          <a href="tel:+79374424697" class="lawyers__phone">+7 (937) 442-46-97</a>
           <div class="lawyers__buttons">
-            <a href="tel:+78452223344" class="lawyers__button lawyers__button--call">Позвонить</a>
-            <a href="https://max.ru/" class="lawyers__button lawyers__button--max">Макс</a>
+            <a href="tel:+79374424697" class="lawyers__button lawyers__button--call">Позвонить</a>
+            <a href="https://max.ru/" target="_blank" class="lawyers__button lawyers__button--max">Макс</a>
           </div>
         </article>
 
@@ -509,9 +512,9 @@
       <div class="footer__column">
         <div class="footer__contact-name">Елена Федоровна Купцова</div>
         <div class="footer__contact-direction">Наследственные дела</div>
-        <a href="tel:+78452223344" class="footer__contact-phone">+7 (8452) 22-33-44</a>
+        <a href="tel:+79374424697" class="footer__contact-phone">+7 (937) 442-46-97</a>
         <div class="footer__messengers">
-          <a href="https://max.ru/" class="footer__messenger">Макс</a>
+          <a href="https://max.ru/" class="footer__messenger" taget="_blank">Макс</a>
         </div>
       </div>
       <div class="footer__column">
@@ -538,7 +541,7 @@
 </footer>
 
 <!-- ===== Мобильная кнопка «Позвонить» ===== -->
-<a href="tel:+78452223344" class="mobile-call">Позвонить юристу</a>
+<a href="tel:+79374424697" class="mobile-call">Позвонить юристу</a>
 
 <!-- ===== JavaScript ===== -->
 <script src="./script.js"></script>
