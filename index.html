@@ -218,286 +218,288 @@
   </div>
 </section>
 
-<!-- ===== ПРОМО-БЛОК (общее фото) — ПЕРВЫМ ===== -->
-<div class="bg-promo">
-  <section class="section section__promo">
+<main>
+  <!-- ===== ПРОМО-БЛОК (общее фото) — ПЕРВЫМ ===== -->
+  <div class="bg-promo">
+    <section class="section section__promo">
+      <div class="page">
+        <div class="promo animate">
+          <div class="promo__image">
+            <!-- <img src="./promo.jpg" alt="Общее фото трёх юристов" /> -->
+          </div>
+          <div class="promo__overlay"></div>
+          <div class="promo__content">
+            <h2 class="promo__title">Три юриста. Одна команда. Ваш результат.</h2>
+            <p class="promo__text">Мы не конкурируем друг с другом — мы дополняем друг друга. Если ваше дело на стыке направлений, вы получите помощь сразу двух специалистов.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+      <!-- ===== ГИД «К КОМУ ИДТИ» ===== -->
+    <section class="section">
+      <div class="page">
+        <div class="guide animate">
+          <h2 class="guide__title">С каким вопросом к кому идти</h2>
+          <div class="guide__list">
+            <div class="guide__item">
+              <div class="guide__item-title">К Елене Федоровне</div>
+              <div class="guide__item-text">Если нужно вступить в наследство, оспорить завещание, разделить доли между родственниками или оформить имущество после смерти близкого.</div>
+            </div>
+            <div class="guide__item">
+              <div class="guide__item-title">К Елене Алексашкиной</div>
+              <div class="guide__item-text">Если вы разводитесь, делите имущество, спорите об алиментах или определяете место жительства ребёнка с бывшим супругом.</div>
+            </div>
+            <div class="guide__item">
+              <div class="guide__item-title">К Кристине Галеевой</div>
+              <div class="guide__item-text">Если возбуждено уголовное дело, пришла проверка, есть спор с контрагентом, налоговые риски или нужно защитить бизнес.</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+    
+  <!-- ===== ЮРИСТЫ (с табами) ===== -->
+  <section class="section" id="lawyers">
     <div class="page">
-      <div class="promo animate">
-        <div class="promo__image">
-          <!-- <img src="./promo.jpg" alt="Общее фото трёх юристов" /> -->
-        </div>
-        <div class="promo__overlay"></div>
-        <div class="promo__content">
-          <h2 class="promo__title">Три юриста. Одна команда. Ваш результат.</h2>
-          <p class="promo__text">Мы не конкурируем друг с другом — мы дополняем друг друга. Если ваше дело на стыке направлений, вы получите помощь сразу двух специалистов.</p>
-        </div>
+      <h2 class="section__title animate">Три юриста — три направления</h2>
+      <p class="section__subtitle animate animate-delay-1">Каждый занимается своим делом много лет. Выбирайте того, чья специализация подходит под вашу ситуацию.</p>
+
+      <!-- Табы (видны только на мобильном) -->
+      <div class="lawyers-tabs" role="tablist">
+        <button class="lawyers-tabs__button is-active" data-tab="inheritance" role="tab" aria-selected="true">Наследство</button>
+        <button class="lawyers-tabs__button" data-tab="family" role="tab" aria-selected="false">Семейные споры</button>
+        <button class="lawyers-tabs__button" data-tab="criminal" role="tab" aria-selected="false">Уголовные и бизнес</button>
+      </div>
+
+      <div class="lawyers">
+
+        <!-- Карточка 1: Купцова -->
+        <article class="lawyers__card animate" id="lawyer-kuptsova" data-tabs="inheritance">
+          <div class="lawyers__photo">
+            <img src="./promo-1.jpg" alt="Елена Федоровна Купцова" />
+          </div>
+          <h3 class="lawyers__name">Елена Федоровна Купцова</h3>
+          <div class="lawyers__directions">
+            <span class="lawyers__direction">Наследственные дела</span>
+          </div>
+          <p class="lawyers__quote">«Занимаюсь наследством 18 лет. Есть спор с родственниками за квартиру или дом — звоните, разберёмся.»</p>
+          <div class="lawyers__services-title">Чем занимаюсь</div>
+          <ul class="lawyers__services">
+            <li class="lawyers__service">Оспаривание завещаний в суде</li>
+            <li class="lawyers__service">Восстановление срока принятия наследства</li>
+            <li class="lawyers__service">Выделение обязательной доли</li>
+            <li class="lawyers__service">Раздел наследственного имущества между родственниками</li>
+            <li class="lawyers__service">Оформление наследства на недвижимость и землю</li>
+          </ul>
+          <div class="lawyers__experience"><strong>18 лет</strong> практики по наследственным делам</div>
+          <a href="tel:+78452223344" class="lawyers__phone">+7 (8452) 22-33-44</a>
+          <div class="lawyers__buttons">
+            <a href="tel:+78452223344" class="lawyers__button lawyers__button--call">Позвонить</a>
+            <a href="https://max.ru/" class="lawyers__button lawyers__button--max">Макс</a>
+          </div>
+        </article>
+
+        <!-- Карточка 2: Алексашкина -->
+        <article class="lawyers__card animate animate-delay-1" id="lawyer-alekshkina" data-tabs="family">
+          <div class="lawyers__photo">
+            <img src="./promo-2.jpg" alt="Елена Алексашкина" />
+          </div>
+          <h3 class="lawyers__name">Елена Алексашкина</h3>
+          <div class="lawyers__directions">
+            <span class="lawyers__direction">Семейные споры</span>
+          </div>
+          <p class="lawyers__quote">«14 лет в семейном праве. Развод, раздел имущества, алименты — веду дело до конца, без лишних нервов.»</p>
+          <div class="lawyers__services-title">Чем занимаюсь</div>
+          <ul class="lawyers__services">
+            <li class="lawyers__service">Развод через суд и через ЗАГС</li>
+            <li class="lawyers__service">Раздел совместно нажитого имущества</li>
+            <li class="lawyers__service">Взыскание и оспаривание алиментов</li>
+            <li class="lawyers__service">Споры о месте жительства ребёнка</li>
+            <li class="lawyers__service">Брачные договоры и соглашения</li>
+          </ul>
+          <div class="lawyers__experience"><strong>14 лет</strong> практики по семейным делам</div>
+          <a href="tel:+78452556677" class="lawyers__phone">+7 (8452) 55-66-77</a>
+          <div class="lawyers__buttons">
+            <a href="tel:+78452556677" class="lawyers__button lawyers__button--call">Позвонить</a>
+            <a href="https://max.ru/" class="lawyers__button lawyers__button--max">Макс</a>
+          </div>
+        </article>
+
+        <!-- Карточка 3: Галеева (пересечение: criminal + family) -->
+        <article class="lawyers__card animate animate-delay-2" id="lawyer-galeeva" data-tabs="criminal,family">
+        <div class="lawyers__photo">
+            <img src="./promo-3.jpg" alt="Кристина Галеева" />
+          </div>
+          <h3 class="lawyers__name">Кристина Галеева</h3>
+          <div class="lawyers__directions">
+            <span class="lawyers__direction">Уголовные и бизнес-дела</span>
+            <span class="lawyers__direction lawyers__direction--secondary">Раздел бизнеса при разводе</span>
+          </div>
+          <p class="lawyers__quote">«20 лет в праве. Уголовная защита, споры с налоговой, конфликты между учредителями — работаю и в суде, и на следствии.»</p>
+          <div class="lawyers__services-title">Чем занимаюсь</div>
+          <ul class="lawyers__services">
+            <li class="lawyers__service">Защита по уголовным делам (следствие, суд)</li>
+            <li class="lawyers__service">Экономические преступления и налоговые споры</li>
+            <li class="lawyers__service">Корпоративные конфликты между учредителями</li>
+            <li class="lawyers__service">Сопровождение проверок и претензий</li>
+            <li class="lawyers__service">Взыскание задолженности с контрагентов</li>
+          </ul>
+          <div class="lawyers__experience"><strong>20 лет</strong> практики, более 400 дел</div>
+          <a href="tel:+78452998877" class="lawyers__phone">+7 (8452) 99-88-77</a>
+          <div class="lawyers__buttons">
+            <a href="tel:+78452998877" class="lawyers__button lawyers__button--call">Позвонить</a>
+            <a href="https://max.ru/" class="lawyers__button lawyers__button--max">Макс</a>
+          </div>
+        </article>
+
       </div>
     </div>
   </section>
-    <!-- ===== ГИД «К КОМУ ИДТИ» ===== -->
+
+  <!-- ===== ОТЗЫВЫ ===== -->
   <section class="section">
     <div class="page">
-      <div class="guide animate">
-        <h2 class="guide__title">С каким вопросом к кому идти</h2>
-        <div class="guide__list">
-          <div class="guide__item">
-            <div class="guide__item-title">К Елене Федоровне</div>
-            <div class="guide__item-text">Если нужно вступить в наследство, оспорить завещание, разделить доли между родственниками или оформить имущество после смерти близкого.</div>
+      <h2 class="section__title animate">Отзывы клиентов</h2>
+      <p class="section__subtitle animate animate-delay-1">Реальные дела и результаты. Имена изменены по просьбе клиентов.</p>
+
+      <div class="reviews animate animate-delay-2">
+        <div class="reviews__group">
+          <div class="reviews__group-title">Елена Федоровна Купцова — наследство</div>
+          <div class="reviews__list">
+            <div class="reviews__card">
+              <p class="reviews__text">«После смерти отца брат оформил всю квартиру на себя, меня из наследства вычеркнул. Елена Федоровна восстановила срок, доказала, что я не знала об открытии наследства. По решению суда получила свою половину.»</p>
+              <div class="reviews__author">— Марина, 42 года, Пенза</div>
+            </div>
+            <div class="reviews__card">
+              <p class="reviews__text">«Долго не могли вступить в наследство на дачу — пропущен срок, документы потеряны. Елена Федоровна собрала всё заново, через суд подтвердила фактическое принятие. Сейчас дом оформлен.»</p>
+              <div class="reviews__author">— Виктор, 58 лет, Пензенский район</div>
+            </div>
           </div>
-          <div class="guide__item">
-            <div class="guide__item-title">К Елене Алексашкиной</div>
-            <div class="guide__item-text">Если вы разводитесь, делите имущество, спорите об алиментах или определяете место жительства ребёнка с бывшим супругом.</div>
+        </div>
+
+        <div class="reviews__group">
+          <div class="reviews__group-title">Елена Алексашкина — семейные споры</div>
+          <div class="reviews__list">
+            <div class="reviews__card">
+              <p class="reviews__text">«Развод был сложный: квартира в ипотеке, машина, двое детей. Елена составила соглашение, разделила всё честно, без затяжных судов. Алименты назначили в твёрдой сумме — удобно.»</p>
+              <div class="reviews__author">— Ольга, 36 лет, Пенза</div>
+            </div>
+            <div class="reviews__card">
+              <p class="reviews__text">«Бывшая жена не давала видеться с сыном. Елена помогла определить порядок общения через суд. Теперь вижу ребёнка по графику, без скандалов.»</p>
+              <div class="reviews__author">— Сергей, 41 год, Заречный</div>
+            </div>
           </div>
-          <div class="guide__item">
-            <div class="guide__item-title">К Кристине Галеевой</div>
-            <div class="guide__item-text">Если возбуждено уголовное дело, пришла проверка, есть спор с контрагентом, налоговые риски или нужно защитить бизнес.</div>
+        </div>
+
+        <div class="reviews__group">
+          <div class="reviews__group-title">Кристина Галеева — уголовные и бизнес-дела</div>
+          <div class="reviews__list">
+            <div class="reviews__card">
+              <p class="reviews__text">«Возбудили дело по статье о мошенничестве — обвинение по сделке с партнёром. Кристина вступила на стадии следствия, добилась прекращения дела за отсутствием состава.»</p>
+              <div class="reviews__author">— Алексей, директор ООО, Пенза</div>
+            </div>
+            <div class="reviews__card">
+              <p class="reviews__text">«Налоговая доначислила 4 млн, грозила уголовкой. Кристина разобралась в первичке, оспорила акт в вышестоящем органе, потом в суде. Сняли почти всё.»</p>
+              <div class="reviews__author">— Иван, владелец сети магазинов</div>
+            </div>
           </div>
         </div>
       </div>
     </div>
   </section>
-</div>
-  
-<!-- ===== ЮРИСТЫ (с табами) ===== -->
-<section class="section" id="lawyers">
-  <div class="page">
-    <h2 class="section__title animate">Три юриста — три направления</h2>
-    <p class="section__subtitle animate animate-delay-1">Каждый занимается своим делом много лет. Выбирайте того, чья специализация подходит под вашу ситуацию.</p>
 
-    <!-- Табы (видны только на мобильном) -->
-    <div class="lawyers-tabs" role="tablist">
-      <button class="lawyers-tabs__button is-active" data-tab="inheritance" role="tab" aria-selected="true">Наследство</button>
-      <button class="lawyers-tabs__button" data-tab="family" role="tab" aria-selected="false">Семейные споры</button>
-      <button class="lawyers-tabs__button" data-tab="criminal" role="tab" aria-selected="false">Уголовные и бизнес</button>
-    </div>
+  <!-- ===== СЕРТИФИКАТЫ ===== -->
+  <section class="section">
+    <div class="page">
+      <h2 class="section__title animate">Дипломы и благодарности</h2>
+      <p class="section__subtitle animate animate-delay-1">Подтверждение квалификации и признания коллег.</p>
 
-    <div class="lawyers">
-
-      <!-- Карточка 1: Купцова -->
-      <article class="lawyers__card animate" id="lawyer-kuptsova" data-tabs="inheritance">
-        <div class="lawyers__photo">
-          <img src="./promo-1.jpg" alt="Елена Федоровна Купцова" />
-        </div>
-        <h3 class="lawyers__name">Елена Федоровна Купцова</h3>
-        <div class="lawyers__directions">
-          <span class="lawyers__direction">Наследственные дела</span>
-        </div>
-        <p class="lawyers__quote">«Занимаюсь наследством 18 лет. Есть спор с родственниками за квартиру или дом — звоните, разберёмся.»</p>
-        <div class="lawyers__services-title">Чем занимаюсь</div>
-        <ul class="lawyers__services">
-          <li class="lawyers__service">Оспаривание завещаний в суде</li>
-          <li class="lawyers__service">Восстановление срока принятия наследства</li>
-          <li class="lawyers__service">Выделение обязательной доли</li>
-          <li class="lawyers__service">Раздел наследственного имущества между родственниками</li>
-          <li class="lawyers__service">Оформление наследства на недвижимость и землю</li>
-        </ul>
-        <div class="lawyers__experience"><strong>18 лет</strong> практики по наследственным делам</div>
-        <a href="tel:+78452223344" class="lawyers__phone">+7 (8452) 22-33-44</a>
-        <div class="lawyers__buttons">
-          <a href="tel:+78452223344" class="lawyers__button lawyers__button--call">Позвонить</a>
-          <a href="https://max.ru/" class="lawyers__button lawyers__button--max">Макс</a>
-        </div>
-      </article>
-
-      <!-- Карточка 2: Алексашкина -->
-      <article class="lawyers__card animate animate-delay-1" id="lawyer-alekshkina" data-tabs="family">
-         <div class="lawyers__photo">
-          <img src="./promo-2.jpg" alt="Елена Алексашкина" />
-        </div>
-        <h3 class="lawyers__name">Елена Алексашкина</h3>
-        <div class="lawyers__directions">
-          <span class="lawyers__direction">Семейные споры</span>
-        </div>
-        <p class="lawyers__quote">«14 лет в семейном праве. Развод, раздел имущества, алименты — веду дело до конца, без лишних нервов.»</p>
-        <div class="lawyers__services-title">Чем занимаюсь</div>
-        <ul class="lawyers__services">
-          <li class="lawyers__service">Развод через суд и через ЗАГС</li>
-          <li class="lawyers__service">Раздел совместно нажитого имущества</li>
-          <li class="lawyers__service">Взыскание и оспаривание алиментов</li>
-          <li class="lawyers__service">Споры о месте жительства ребёнка</li>
-          <li class="lawyers__service">Брачные договоры и соглашения</li>
-        </ul>
-        <div class="lawyers__experience"><strong>14 лет</strong> практики по семейным делам</div>
-        <a href="tel:+78452556677" class="lawyers__phone">+7 (8452) 55-66-77</a>
-        <div class="lawyers__buttons">
-          <a href="tel:+78452556677" class="lawyers__button lawyers__button--call">Позвонить</a>
-          <a href="https://max.ru/" class="lawyers__button lawyers__button--max">Макс</a>
-        </div>
-      </article>
-
-      <!-- Карточка 3: Галеева (пересечение: criminal + family) -->
-      <article class="lawyers__card animate animate-delay-2" id="lawyer-galeeva" data-tabs="criminal,family">
-       <div class="lawyers__photo">
-          <img src="./promo-3.jpg" alt="Кристина Галеева" />
-        </div>
-        <h3 class="lawyers__name">Кристина Галеева</h3>
-        <div class="lawyers__directions">
-          <span class="lawyers__direction">Уголовные и бизнес-дела</span>
-          <span class="lawyers__direction lawyers__direction--secondary">Раздел бизнеса при разводе</span>
-        </div>
-        <p class="lawyers__quote">«20 лет в праве. Уголовная защита, споры с налоговой, конфликты между учредителями — работаю и в суде, и на следствии.»</p>
-        <div class="lawyers__services-title">Чем занимаюсь</div>
-        <ul class="lawyers__services">
-          <li class="lawyers__service">Защита по уголовным делам (следствие, суд)</li>
-          <li class="lawyers__service">Экономические преступления и налоговые споры</li>
-          <li class="lawyers__service">Корпоративные конфликты между учредителями</li>
-          <li class="lawyers__service">Сопровождение проверок и претензий</li>
-          <li class="lawyers__service">Взыскание задолженности с контрагентов</li>
-        </ul>
-        <div class="lawyers__experience"><strong>20 лет</strong> практики, более 400 дел</div>
-        <a href="tel:+78452998877" class="lawyers__phone">+7 (8452) 99-88-77</a>
-        <div class="lawyers__buttons">
-          <a href="tel:+78452998877" class="lawyers__button lawyers__button--call">Позвонить</a>
-          <a href="https://max.ru/" class="lawyers__button lawyers__button--max">Макс</a>
-        </div>
-      </article>
-
-    </div>
-  </div>
-</section>
-
-<!-- ===== ОТЗЫВЫ ===== -->
-<section class="section">
-  <div class="page">
-    <h2 class="section__title animate">Отзывы клиентов</h2>
-    <p class="section__subtitle animate animate-delay-1">Реальные дела и результаты. Имена изменены по просьбе клиентов.</p>
-
-    <div class="reviews animate animate-delay-2">
-      <div class="reviews__group">
-        <div class="reviews__group-title">Елена Федоровна Купцова — наследство</div>
-        <div class="reviews__list">
-          <div class="reviews__card">
-            <p class="reviews__text">«После смерти отца брат оформил всю квартиру на себя, меня из наследства вычеркнул. Елена Федоровна восстановила срок, доказала, что я не знала об открытии наследства. По решению суда получила свою половину.»</p>
-            <div class="reviews__author">— Марина, 42 года, Пенза</div>
-          </div>
-          <div class="reviews__card">
-            <p class="reviews__text">«Долго не могли вступить в наследство на дачу — пропущен срок, документы потеряны. Елена Федоровна собрала всё заново, через суд подтвердила фактическое принятие. Сейчас дом оформлен.»</p>
-            <div class="reviews__author">— Виктор, 58 лет, Пензенский район</div>
+      <div class="certificates__gallery">
+        <div class="certificates__item animate">
+          <div class="certificates__image">Диплом ПГУ<br>Юридический факультет</div>
+          <div class="certificates__caption">
+            <strong>Диплом ПГУ</strong>
+            <span>Е. Ф. Купцова, 2006</span>
           </div>
         </div>
-      </div>
-
-      <div class="reviews__group">
-        <div class="reviews__group-title">Елена Алексашкина — семейные споры</div>
-        <div class="reviews__list">
-          <div class="reviews__card">
-            <p class="reviews__text">«Развод был сложный: квартира в ипотеке, машина, двое детей. Елена составила соглашение, разделила всё честно, без затяжных судов. Алименты назначили в твёрдой сумме — удобно.»</p>
-            <div class="reviews__author">— Ольга, 36 лет, Пенза</div>
-          </div>
-          <div class="reviews__card">
-            <p class="reviews__text">«Бывшая жена не давала видеться с сыном. Елена помогла определить порядок общения через суд. Теперь вижу ребёнка по графику, без скандалов.»</p>
-            <div class="reviews__author">— Сергей, 41 год, Заречный</div>
+        <div class="certificates__item animate animate-delay-1">
+          <div class="certificates__image">Благодарность<br>Адвокатской палаты</div>
+          <div class="certificates__caption">
+            <strong>Благодарность палаты</strong>
+            <span>Е. Алексашкина, 2019</span>
           </div>
         </div>
-      </div>
-
-      <div class="reviews__group">
-        <div class="reviews__group-title">Кристина Галеева — уголовные и бизнес-дела</div>
-        <div class="reviews__list">
-          <div class="reviews__card">
-            <p class="reviews__text">«Возбудили дело по статье о мошенничестве — обвинение по сделке с партнёром. Кристина вступила на стадии следствия, добилась прекращения дела за отсутствием состава.»</p>
-            <div class="reviews__author">— Алексей, директор ООО, Пенза</div>
+        <div class="certificates__item animate animate-delay-2">
+          <div class="certificates__image">Сертификат<br>Квалификационный экзамен</div>
+          <div class="certificates__caption">
+            <strong>Квалификационный сертификат</strong>
+            <span>К. Галеева, 2011</span>
           </div>
-          <div class="reviews__card">
-            <p class="reviews__text">«Налоговая доначислила 4 млн, грозила уголовкой. Кристина разобралась в первичке, оспорила акт в вышестоящем органе, потом в суде. Сняли почти всё.»</p>
-            <div class="reviews__author">— Иван, владелец сети магазинов</div>
+        </div>
+        <div class="certificates__item animate animate-delay-3">
+          <div class="certificates__image">Курс повышения<br>Наследственное право</div>
+          <div class="certificates__caption">
+            <strong>Повышение квалификации</strong>
+            <span>Е. Ф. Купцова, 2023</span>
+          </div>
+        </div>
+        <div class="certificates__item animate">
+          <div class="certificates__image">Благодарственное<br>письмо от суда</div>
+          <div class="certificates__caption">
+            <strong>Благодарность суда</strong>
+            <span>Е. Алексашкина, 2022</span>
+          </div>
+        </div>
+        <div class="certificates__item animate animate-delay-1">
+          <div class="certificates__image">Сертификат<br>Уголовный процесс</div>
+          <div class="certificates__caption">
+            <strong>Курс по уголовному праву</strong>
+            <span>К. Галеева, 2020</span>
+          </div>
+        </div>
+        <div class="certificates__item animate animate-delay-2">
+          <div class="certificates__image">Диплом<br>Магистратура</div>
+          <div class="certificates__caption">
+            <strong>Магистр права</strong>
+            <span>Е. Алексашкина, 2009</span>
+          </div>
+        </div>
+        <div class="certificates__item animate animate-delay-3">
+          <div class="certificates__image">Благодарность<br>Палаты юристов</div>
+          <div class="certificates__caption">
+            <strong>Благодарность палаты</strong>
+            <span>К. Галеева, 2024</span>
           </div>
         </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- ===== СЕРТИФИКАТЫ ===== -->
-<section class="section">
-  <div class="page">
-    <h2 class="section__title animate">Дипломы и благодарности</h2>
-    <p class="section__subtitle animate animate-delay-1">Подтверждение квалификации и признания коллег.</p>
+  <!-- ===== КОМПАНИИ ===== -->
+  <section class="section">
+    <div class="page">
+      <h2 class="section__title animate">С кем работали</h2>
+      <p class="section__subtitle animate animate-delay-1">Компании Пензы и Пензенской области, которым юристы помогали решать споры и защищать интересы.</p>
 
-    <div class="certificates__gallery">
-      <div class="certificates__item animate">
-        <div class="certificates__image">Диплом ПГУ<br>Юридический факультет</div>
-        <div class="certificates__caption">
-          <strong>Диплом ПГУ</strong>
-          <span>Е. Ф. Купцова, 2006</span>
-        </div>
+      <div class="companies__list">
+        <div class="companies__item animate">ООО «ПензаСтрой»</div>
+        <div class="companies__item animate animate-delay-1">АО «Сура»</div>
+        <div class="companies__item animate animate-delay-2">ООО «Агро-Регион»</div>
+        <div class="companies__item animate animate-delay-3">ИП Кузнецов</div>
+        <div class="companies__item animate">ООО «Транс-Логистик»</div>
+        <div class="companies__item animate animate-delay-1">ООО «МедСервис»</div>
+        <div class="companies__item animate animate-delay-2">ЗАО «Промтех»</div>
+        <div class="companies__item animate animate-delay-3">ООО «Сармат»</div>
+        <div class="companies__item animate">ИП Смирнова</div>
+        <div class="companies__item animate animate-delay-1">ООО «Волга-Трейд»</div>
+        <div class="companies__item animate animate-delay-2">ООО «Строй-Мастер»</div>
+        <div class="companies__item animate animate-delay-3">АО «Пивзавод»</div>
       </div>
-      <div class="certificates__item animate animate-delay-1">
-        <div class="certificates__image">Благодарность<br>Адвокатской палаты</div>
-        <div class="certificates__caption">
-          <strong>Благодарность палаты</strong>
-          <span>Е. Алексашкина, 2019</span>
-        </div>
-      </div>
-      <div class="certificates__item animate animate-delay-2">
-        <div class="certificates__image">Сертификат<br>Квалификационный экзамен</div>
-        <div class="certificates__caption">
-          <strong>Квалификационный сертификат</strong>
-          <span>К. Галеева, 2011</span>
-        </div>
-      </div>
-      <div class="certificates__item animate animate-delay-3">
-        <div class="certificates__image">Курс повышения<br>Наследственное право</div>
-        <div class="certificates__caption">
-          <strong>Повышение квалификации</strong>
-          <span>Е. Ф. Купцова, 2023</span>
-        </div>
-      </div>
-      <div class="certificates__item animate">
-        <div class="certificates__image">Благодарственное<br>письмо от суда</div>
-        <div class="certificates__caption">
-          <strong>Благодарность суда</strong>
-          <span>Е. Алексашкина, 2022</span>
-        </div>
-      </div>
-      <div class="certificates__item animate animate-delay-1">
-        <div class="certificates__image">Сертификат<br>Уголовный процесс</div>
-        <div class="certificates__caption">
-          <strong>Курс по уголовному праву</strong>
-          <span>К. Галеева, 2020</span>
-        </div>
-      </div>
-      <div class="certificates__item animate animate-delay-2">
-        <div class="certificates__image">Диплом<br>Магистратура</div>
-        <div class="certificates__caption">
-          <strong>Магистр права</strong>
-          <span>Е. Алексашкина, 2009</span>
-        </div>
-      </div>
-      <div class="certificates__item animate animate-delay-3">
-        <div class="certificates__image">Благодарность<br>Палаты юристов</div>
-        <div class="certificates__caption">
-          <strong>Благодарность палаты</strong>
-          <span>К. Галеева, 2024</span>
-        </div>
-      </div>
+      <p class="companies__note animate">Работали с компаниями Пензы и области</p>
     </div>
-  </div>
-</section>
-
-<!-- ===== КОМПАНИИ ===== -->
-<section class="section">
-  <div class="page">
-    <h2 class="section__title animate">С кем работали</h2>
-    <p class="section__subtitle animate animate-delay-1">Компании Пензы и Пензенской области, которым юристы помогали решать споры и защищать интересы.</p>
-
-    <div class="companies__list">
-      <div class="companies__item animate">ООО «ПензаСтрой»</div>
-      <div class="companies__item animate animate-delay-1">АО «Сура»</div>
-      <div class="companies__item animate animate-delay-2">ООО «Агро-Регион»</div>
-      <div class="companies__item animate animate-delay-3">ИП Кузнецов</div>
-      <div class="companies__item animate">ООО «Транс-Логистик»</div>
-      <div class="companies__item animate animate-delay-1">ООО «МедСервис»</div>
-      <div class="companies__item animate animate-delay-2">ЗАО «Промтех»</div>
-      <div class="companies__item animate animate-delay-3">ООО «Сармат»</div>
-      <div class="companies__item animate">ИП Смирнова</div>
-      <div class="companies__item animate animate-delay-1">ООО «Волга-Трейд»</div>
-      <div class="companies__item animate animate-delay-2">ООО «Строй-Мастер»</div>
-      <div class="companies__item animate animate-delay-3">АО «Пивзавод»</div>
-    </div>
-    <p class="companies__note animate">Работали с компаниями Пензы и области</p>
-  </div>
-</section>
+  </section>
+</main>
 
 <!-- ===== ПОДВАЛ (горизонтальный) ===== -->
 <footer class="footer">
