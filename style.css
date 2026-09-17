@@ -211,7 +211,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   display: flex;
   align-items: center;
   justify-content: center;
-  /* padding-bottom: 54px; */
 }
 
 /* ===== Промо-блок (общее фото) ===== */
@@ -220,7 +219,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   overflow: hidden;
   display: flex;
   align-items: flex-end;
-  box-shadow: var(--shadow-soft);
 }
 
 /* .promo__image {
