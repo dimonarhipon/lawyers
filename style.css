@@ -301,6 +301,11 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   justify-content: center;
 } */
 
+.promo__bg-decor {
+  position: absolute;
+  border-radius: 50%;
+  pointer-events: none;
+}
 
 .promo__overlay {
   position: absolute;
@@ -320,7 +325,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   z-index: 2;
   padding: 48px;
   width: 100%;
-  max-width: 720px;
+  max-width: 640px;
 }
 
 .promo__title {
@@ -330,6 +335,13 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   letter-spacing: -0.02em;
   margin-bottom: 16px;
   color: #fff;
+}
+
+.promo__title-accent {
+  background: linear-gradient(135deg, #93c5fd, #60a5fa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .promo__text {
@@ -885,8 +897,10 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .lawyers-tabs {
     display: flex;
   }
+  .promo__content { max-width: 590px;}
 }
 @media (max-width: 960px) {
+  .promo__content {  max-width: 490px; }
   .section__title { font-size: 32px; }
   .hero__title { font-size: 44px; }
   .hero { padding: 72px 0 56px; }
@@ -906,7 +920,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     gap: 10px;
   }
   .header__inner { align-items: flex-start; padding: 12px 24px; }
-  .header__logo-text { display: none; }
+  .promo__overlay { display: none; }
+  .promo__content { max-width: 430px; }
   .hero__title { font-size: 36px; }
   .hero__subtitle { font-size: 17px; margin-bottom: 32px; }
   .hero__button { width: 100%; text-align: center; }
@@ -940,6 +955,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 @media (max-width: 540px) {
+  .header__logo-text { display: none; }
   /* .header__inner {
     display: flex;
     flex-direction: column;
@@ -951,6 +967,9 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .section { padding: 0; }
   .bg-promo {
     background-position: top -240px center;
+  }
+  .promo__content {
+    max-width: 490px;
   }
   .companies__list {
     grid-template-columns: repeat(1, 1fr);
