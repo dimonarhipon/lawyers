@@ -357,7 +357,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   padding: 40px;
 }
 
-.guide__title {
+.guide__heading {
   font-size: 28px;
   font-weight: 800;
   margin-bottom: 28px;
@@ -369,6 +369,9 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 16px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
 .guide__item {
@@ -379,19 +382,21 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   transition: all 0.2s;
 }
 
-.guide__item:hover {
-  border-color: var(--color-blue);
-  box-shadow: 0 4px 16px rgba(21, 73, 139, 0.08);
+.guide__icon {
+  display: inline-block;
+  font-size: 28px;
+  margin-bottom: 14px;
 }
 
-.guide__item-title {
+.guide__title {
+  display: inline-block;
   font-weight: 700;
   color: var(--color-blue);
   margin-bottom: 10px;
   font-size: 17px;
 }
 
-.guide__item-text {
+.guide__text {
   font-size: 15px;
   color: var(--color-black);
   line-height: 1.55;
