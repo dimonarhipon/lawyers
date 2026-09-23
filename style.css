@@ -449,7 +449,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   background: var(--color-milk);
   color: var(--color-black);
   border-radius: 20px;
-  padding: 32px;
+  padding: 20px;
   box-shadow: var(--shadow-soft);
   display: flex;
   flex-direction: column;
@@ -981,5 +981,135 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   }
   .companies__list {
     grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+
+
+/* ===== Слайдеры (мобильная версия) ===== */
+.slider {
+  position: relative;
+  overflow: hidden;
+}
+
+.slider__track {
+  display: flex;
+  transition: transform 0.4s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.slider__slide {
+  flex: 0 0 100%;
+  min-width: 0;
+}
+
+.slider__controls {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.slider__btn {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--color-blue);
+  color: var(--color-milk);
+  font-size: 18px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+  border: none;
+  cursor: pointer;
+}
+
+.slider__btn:hover {
+  background: var(--color-blue-dark);
+  transform: scale(1.05);
+}
+
+.slider__btn:active {
+  transform: scale(0.95);
+}
+
+.slider__dots {
+  display: flex;
+  gap: 8px;
+}
+
+.slider__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(250, 246, 236, 0.3);
+  cursor: pointer;
+  transition: all 0.2s;
+  border: none;
+  padding: 0;
+}
+
+.slider__dot:hover {
+  background: rgba(250, 246, 236, 0.5);
+}
+
+.slider__dot.is-active {
+  background: var(--color-milk);
+  width: 24px;
+  border-radius: 5px;
+}
+
+/* Мобильная версия: слайдер активен */
+@media (max-width: 1024px) {
+  .slider__controls {
+    display: flex;
+  }
+
+  .slider__track {
+    gap: 0;
+  }
+
+  /* Отзывы в слайдере */
+  #reviews-slider .reviews__group {
+    margin-bottom: 0;
+    padding: 0 4px;
+  }
+
+  #reviews-slider .reviews__list {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  /* Сертификаты в слайдере */
+  #certificates-slider .certificates__gallery {
+    display: flex;
+    gap: 0;
+  }
+
+  #certificates-slider .certificates__item {
+    flex: 0 0 calc(100% - 8px);
+    margin: 0 4px;
+  }
+}
+
+/* Десктоп: слайдер отключен */
+@media (min-width: 1025px) {
+  .slider__track {
+    display: grid;
+    gap: 16px;
+  }
+
+  .slider__slide {
+    flex: none;
+  }
+
+  #reviews-slider .slider__track {
+    grid-template-columns: 1fr;
+  }
+
+  #certificates-slider .slider__track {
+    grid-template-columns: repeat(4, 1fr);
   }
 }
