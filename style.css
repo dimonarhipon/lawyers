@@ -247,7 +247,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   background: linear-gradient(135deg, #0a2d5c 0%, #1a5298 40%, #2468b8 70%, #0E3668 100%);
   overflow: hidden;
 
-  background-image: url('./promo.jpg');
+  background-image: url('./promo_2.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -587,10 +587,10 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .lawyers__phone:hover { color: var(--color-blue); }
 
 .lawyers__buttons {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 10px;
   margin-top: auto;
+  display: grid;
+  /* grid-template-columns: 1fr 1fr;
+  gap: 10px; */
 }
 
 .lawyers__button {
