@@ -732,19 +732,17 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 
 .certificates__item:hover {
-  transform: translateY(-4px);
   box-shadow: var(--shadow-hover);
 }
 
 .certificates__image {
-  aspect-ratio: 3 / 4;
   background: #fff;
   display: flex;
   align-items: center;
   justify-content: center;
   color: var(--color-blue);
   font-size: 13px;
-  padding: 24px;
+  padding: 18px;
   text-align: center;
   font-weight: 700;
   position: relative;
@@ -752,13 +750,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   line-height: 1.4;
 }
 
-.certificates__image::before {
-  content: "";
-  position: absolute;
-  inset: 14px;
-  border: 1px solid rgba(21, 73, 139, 0.2);
-  border-radius: 4px;
-}
 
 .certificates__caption {
   padding: 16px;
