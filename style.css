@@ -1044,7 +1044,6 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .companies__list { grid-template-columns: repeat(3, 1fr); }
   .promo__title { font-size: 28px; }
   .promo__content { padding: 32px; }
-  .footer__grid { grid-template-columns: 1fr; gap: 24px; }
 }
 
 
@@ -1072,20 +1071,13 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
     flex-direction: column;
   }
   /* .mobile-call { display: block; } */
-  .footer { padding-bottom: 10px; }
   .companies__list { grid-template-columns: repeat(2, 1fr); }
   .promo__title { font-size: 24px; }
   .promo__text { font-size: 16px; }
-
-  .footer {
-    text-align: center;
-  }
-  .footer__title {
-    font-size: 28px;
-  }
-  .footer__column {
-    align-items: center;
-  }
+  .footer { padding-bottom: 10px; text-align: center;}
+  .footer__title { font-size: 28px;}
+  .footer__grid { grid-template-columns: 1fr; gap: 24px; }
+  .footer__column { align-items: center; }
 }
 
 @media (max-width: 540px) {
@@ -1131,6 +1123,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   justify-content: center;
   gap: 16px;
   margin-top: 24px;
+  padding-bottom: 10px;
 }
 
 .slider__btn {
