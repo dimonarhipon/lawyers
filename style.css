@@ -830,6 +830,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 32px;
+  margin-bottom: 24px;
 }
 
 .footer__column {
@@ -893,6 +894,87 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   color: rgba(250, 246, 236, 0.5);
   text-align: center;
   font-weight: 500;
+}
+
+/* ===== Галерея офиса ===== */
+.office-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.office-gallery__item {
+  position: relative;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: var(--shadow-card);
+  aspect-ratio: 4 / 3;
+  transition: transform 0.3s ease;
+}
+
+.office-gallery__item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+}
+
+.office-gallery__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.office-gallery__item:hover .office-gallery__image {
+  transform: scale(1.05);
+}
+
+.office-gallery__caption {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 16px 20px;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.7), transparent);
+  color: #fff;
+  font-weight: 600;
+  font-size: 16px;
+}
+
+@media (max-width: 768px) {
+  .office-gallery {
+    grid-template-columns: 1fr;
+  }
+}
+
+/* ===== Социальные сети в футере ===== */
+.social {
+  /* background-color: var(--color-blue); */
+}
+
+.social__link {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 24px;
+  background-color: var(--color-blue);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 100px;
+  color: var(--color-milk);
+  font-weight: 600;
+  font-size: 15px;
+  transition: all 0.2s ease;
+}
+
+.social__link:hover {
+  background: var(--color-blue-dark);
+  border-color: rgba(255, 255, 255, 0.25);
+  transform: translateY(-2px);
+}
+
+.social__icon {
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
 }
 
 /* ===== Мобильная кнопка «Позвонить» ===== */
