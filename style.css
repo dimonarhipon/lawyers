@@ -283,10 +283,12 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   display: flex;
   align-items: center;
   justify-content: center;
+  padding-top: 2%;
 }
 
 .promo {
   position: relative;
+  width: 47%;
   overflow: hidden;
   display: flex;
   align-items: flex-end;
@@ -326,9 +328,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .promo__content {
   position: relative;
   z-index: 2;
-  padding: 48px;
-  width: 100%;
-  max-width: 640px;
+  padding: 35px;
 }
 
 .promo__title {
@@ -1095,19 +1095,27 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 
 /* ===== Адаптив ===== */
-@media (max-width: 1024px) {
-  .bg-promo {
-    background-position: top -300px center;
+@media (max-width: 1200px) {
+  .promo {
+    width: 75%;    
   }
+
+  .bg-promo {
+    background-position: top 40% center;
+  }
+}
+@media (max-width: 1024px) {
   .lawyers { grid-template-columns: 1fr; }
   /* Табы на мобильном */
   .lawyers-tabs {
     display: flex;
   }
-  .promo__content { max-width: 590px;}
 }
 @media (max-width: 960px) {
-  .promo__content {  max-width: 490px; }
+  .bg-promo {
+    background-position: center;
+  }
+  .section__promo { padding: 5%;}
   .section__title { font-size: 32px; }
   .hero__title { font-size: 44px; }
   .hero { padding: 72px 0 56px; }
@@ -1127,7 +1135,9 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   }
   .header__inner { align-items: flex-start; padding: 12px 24px; }
   .promo__overlay { display: none; }
-  .promo__content { max-width: 430px; }
+  .promo {width: 100%; }
+  .section__promo {padding: 0%;}
+  .promo__content { padding: 32px; padding-left: 0}
   .hero__title { font-size: 36px; }
   .hero__subtitle { font-size: 17px; margin-bottom: 32px; }
   .hero__button { width: 100%; text-align: center; }
