@@ -356,9 +356,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 /* ===== Гид «К кому идти» ===== */
 .guide {
-  /* background-color: rgba(var(--color-blue), 0.1); */
   color: var(--color-black);
-  padding: 40px;
+  padding: 16% 40px 0;
 }
 
 .guide__heading {
@@ -1101,8 +1100,12 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   }
 
   .bg-promo {
-    background-position: top 40% center;
+    background-position: top 70% center;
   }
+  .guide {
+    padding-top: 33%;    
+  }
+
 }
 @media (max-width: 1024px) {
   .lawyers { grid-template-columns: 1fr; }
@@ -1112,13 +1115,12 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   }
 }
 @media (max-width: 960px) {
-  .bg-promo {
-    background-position: center;
-  }
+  .bg-promo { background-position: bottom 175px center;}
   .section__promo { padding: 5%;}
   .section__title { font-size: 32px; }
   .hero__title { font-size: 44px; }
   .hero { padding: 72px 0 56px; }
+  .guide {padding-top: 35%;}
   .guide__list { grid-template-columns: 1fr; }
   .reviews__list { grid-template-columns: 1fr; }
   .certificates__gallery { grid-template-columns: repeat(2, 1fr); }
@@ -1144,7 +1146,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   /* .section { padding: 56px 0; } */
   .section__title { font-size: 28px; }
   .section__subtitle { font-size: 16px; margin-bottom: 32px; }
-  .guide {padding: 0}
+  .guide {padding: 0; padding-top: 50%;}
   .reviews { padding: 28px; }
   .guide__title { font-size: 22px; }
   .lawyers__card { padding: 24px; }
@@ -1167,7 +1169,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   .page, .header__inner, .promo__content, .lawyers__card, .guide__item, .reviews  { padding: 12px; }
   .section { padding: 0; }
   .bg-promo {
-    background-position: top -240px center;
+    background-position: top -140px center;
   }
   .promo__content {
     max-width: 490px;
